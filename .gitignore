@@ -1,0 +1,19 @@
+# Local runtimes, generated build files and workstation-only outputs
+.tools/
+.venv/
+**/__pycache__/
+*.py[cod]
+**/build/
+**/node_modules/
+/output/
+/rhino-setup/
+/eeg-ar-demo/dist/
+/pupil-gaze-demo/dist/
+*.log
+.env
+.env.*
+!.env.example
+Thumbs.db
+.DS_Store
+
+# Keep eeg-ar-demo/web/dist: the desktop demo serves this offline build.

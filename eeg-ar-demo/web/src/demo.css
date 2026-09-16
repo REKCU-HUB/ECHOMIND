@@ -1,0 +1,50 @@
+.eeg-demo-strip { position:fixed; z-index:100; display:flex; flex-direction:column; border:1px solid rgba(185,239,235,.35); border-radius:18px; background:rgba(7,30,38,.94); box-shadow:0 8px 30px #06262a38; backdrop-filter:blur(16px); cursor:default; overflow:hidden; }
+.eeg-demo-strip button, .eeg-demo-reopen { color:#eaf7f4; border:1px solid #b9efeb50; background:#ffffff08; border-radius:8px; padding:7px 11px; cursor:pointer; font-size:13px; }
+.eeg-demo-strip button:hover, .eeg-demo-reopen:hover { background:#ffffff18; }
+.eeg-demo-toolbar { display:flex; align-items:center; padding:6px 8px; gap:8px; border-bottom:1px solid #b9efeb22; flex-shrink:0; }
+.eeg-demo-toolbar .eeg-demo-drag { flex:1; display:flex; align-items:center; gap:9px; text-align:left; border:0; background:transparent; cursor:grab; touch-action:none; user-select:none; font-weight:550; }
+.eeg-demo-toolbar .eeg-demo-drag:active { cursor:grabbing; }
+.eeg-demo-drag>span { font-size:20px; color:#aac8ca; line-height:1; }
+.eeg-demo-drag small { font-size:10px; letter-spacing:1.4px; color:#b9efeb; font-weight:400; }
+.eeg-demo-toolbar .eeg-demo-hide { font-size:20px; line-height:20px; padding:3px 10px; }
+.eeg-demo-body { padding:12px 18px 20px; display:flex; flex-direction:column; gap:12px; overflow:auto; flex:1; min-height:0; }
+.eeg-demo-strip small { font-size:12px; color:#b7cdcf; }
+.eeg-demo-meter { width:100%; flex-shrink:0; }
+.eeg-demo-meter>span { display:flex; align-items:baseline; gap:8px; font-size:14px; }
+.eeg-demo-meter b { font-size:26px; font-weight:500; color:#b9efeb; margin-left:auto; }
+.eeg-meter-track { position:relative; height:4px; margin-top:7px; background:#526b6f; border-radius:3px; }
+.eeg-meter-track i { display:block; height:4px; background:#85ded3; border-radius:3px; transition:width .12s linear; }
+.eeg-meter-track em { position:absolute; top:-3px; height:10px; border-left:1px solid white; }
+.eeg-demo-copy { display:grid; gap:5px; min-width:0; }
+.eeg-demo-copy strong { font-size:14px; font-weight:500; }
+.eeg-demo-copy small { overflow-wrap:anywhere; line-height:1.45; }
+.eeg-demo-body footer { margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:8px; }
+.eeg-demo-body footer button { padding:5px 9px; }
+.eeg-demo-strip .eeg-demo-resize { position:absolute; bottom:0; right:0; width:24px; height:24px; padding:0; border:0; border-radius:0; background:transparent; color:#8db1b4; cursor:nwse-resize; touch-action:none; user-select:none; font-size:17px; }
+.eeg-demo-reopen { position:fixed; bottom:18px; right:18px; z-index:100; display:flex; align-items:center; gap:10px; padding:10px 14px; border-radius:20px; background:rgba(7,30,38,.9); box-shadow:0 4px 20px #06262a24; }
+.eeg-demo-reopen span { font-size:17px; color:#b9efeb; }
+.dwell-target.is-dwelling .dwell-line::after { animation:none !important; transform:scaleX(var(--eeg-progress,0)) !important; transition:transform .1s linear; }
+.dwell-target.is-eeg-confirmed { outline:2px solid #b9efeb; outline-offset:3px; }
+.ar-stage.is-capturing .eeg-demo-strip, .ar-stage.is-capturing .eeg-demo-reopen { display:none; }
+.ar-stage.is-voice-open .primary-experience { overflow-y:auto; align-items:start; }
+.eye-pointer-demo { position:fixed; inset:0; pointer-events:none; z-index:10000; }
+.eye-pointer-ring { position:absolute; width:34px; height:34px; box-sizing:border-box; border:2px solid #9fff67; border-radius:50%; transform:translate(-50%,-50%); background:#9fff6710; box-shadow:0 0 0 1px #17312055,0 0 14px #9fff6766; }
+.eye-pointer-ring i { position:absolute; left:50%; top:50%; width:4px; height:4px; transform:translate(-50%,-50%); border-radius:50%; background:#9fff67; box-shadow:0 0 0 1px #17312088; }
+.eye-pointer-label { position:absolute; left:16px; bottom:16px; padding:6px 9px; color:#c8ffa9; background:#0b251de6; border:1px solid #9fff6755; border-radius:7px; font-size:10px; font-weight:600; letter-spacing:1.2px; line-height:1.3; }
+.gaze-source-panel { position:fixed; left:18px; right:auto; bottom:18px; z-index:10001; width:264px; max-width:calc(100vw - 36px); box-sizing:border-box; padding:8px; border:1px solid #b9efeb44; border-radius:14px; color:#eaf7f4; background:rgba(7,30,38,.95); box-shadow:0 5px 24px #06262a38; backdrop-filter:blur(16px); font-family:inherit; }
+.gaze-source-options { display:flex; gap:4px; }
+.gaze-source-options button, .gaze-fullscreen-button { font-family:inherit; font-size:12px; font-weight:500; color:#c2d8d8; cursor:pointer; border:1px solid transparent; background:transparent; padding:9px 8px; border-radius:8px; }
+.gaze-source-options button { flex:1; }
+.gaze-source-options button[aria-pressed=true] { color:#edfffc; background:#39766d80; border-color:#a8e9de55; }
+.gaze-source-options button:hover, .gaze-fullscreen-button:hover { background:#b9efeb24; }
+.gaze-source-panel button:focus-visible { outline:2px solid #c8ffa9; outline-offset:2px; }
+.gaze-source-panel p { margin:8px 6px; color:#bed2d4; font-size:11px; line-height:1.55; }
+.camera-link-state { display:flex; align-items:center; gap:6px; margin:12px 6px 0; color:#c0cecf; font-size:9px; letter-spacing:.5px; font-weight:600; }
+.camera-link-state i { width:6px; height:6px; flex:none; border-radius:50%; background:#b8c1be; }
+.camera-link-state.is-tracking { color:#c8ffa9; }
+.camera-link-state.is-tracking i { background:#9fff67; box-shadow:0 0 8px #9fff6766; }
+.gaze-fullscreen-button { display:block; width:100%; border-color:#b9efeb44; background:#b9efeb12; color:#eaf7f4; }
+.gaze-source-panel small { display:block; margin:8px 6px 3px; color:#99b3b6; font-size:9px; line-height:1.5; }
+.eeg-demo-reopen { right:18px; left:auto; bottom:18px; }
+.camera-gaze-demo .eye-pointer-label { display:none; }
+.eye-pointer-label { bottom:84px; }
