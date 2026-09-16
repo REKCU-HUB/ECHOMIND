@@ -64,4 +64,6 @@ Run `python -m unittest discover -s tests` inside each Python project. Run `node
 
 Each project contains a PyInstaller `.spec` file. Build the webpage first, then run `python -m PyInstaller --noconfirm <project-spec-file>` from each project directory. Executables are distributed as Release assets rather than stored in Git history.
 
+After building both executables, run `python scripts/build_windows_bundle.py` from the repository root to create the Windows ZIP, relative-path launchers and SHA-256 checksum under `output/releases/`.
+
 See the [eye application guide](pupil-gaze-demo/README.md) and [EEG/AR guide](eeg-ar-demo/README.md) for detailed controls and troubleshooting.
